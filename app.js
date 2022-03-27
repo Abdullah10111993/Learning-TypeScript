@@ -1,34 +1,14 @@
 // js
-function add(n1, n2) {
-    return n1 + n2;
-}
-var num1 = 1;
-var num2 = 2;
-var num3 = '3';
-console.log(add(num1, num2));
-console.log(add(num1, num3));
-// ts number
-function addts(n1, n2) {
-    return n1 + n2;
-}
-console.log(addts(num1, num2));
-// console.log(addts(num1, num3)); // wil produce an error
-// ts boolean
-function addtsb(n1, n2, donotReturn) {
-    if (donotReturn) {
-        console.log(n1 + n2);
-        return;
-    }
-    return n1 + n2;
-}
-addtsb(num1, num2, false); // will not print
-addtsb(num1, num2, true);
-// ts string
-function addtsbs(n1, n2, donotReturn, phrase) {
-    if (donotReturn) {
-        console.log(phrase + (n1 + n2));
-        return;
-    }
-    return n1 + n2;
-}
-addtsbs(num1, num2, true, 'The result is ');
+var person = {
+    name: 'Abdullah',
+    age: 69
+};
+console.log(person);
+// console.log(person.lastname); // will produce an error
+// ts
+var personts = {
+    name: 'Abdullah',
+    age: 69
+};
+console.log(personts);
+console.log(person.name); // will produce an error
