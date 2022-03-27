@@ -16,10 +16,19 @@ console.log(addts(num1, num2));
 // ts boolean
 function addtsb(n1, n2, donotReturn) {
     if (donotReturn) {
-        console.log('The result is ' + (n1 + n2));
+        console.log(n1 + n2);
         return;
     }
     return n1 + n2;
 }
-addtsb(num1, num2, false);
+addtsb(num1, num2, false); // will not print
 addtsb(num1, num2, true);
+// ts string
+function addtsbs(n1, n2, donotReturn, phrase) {
+    if (donotReturn) {
+        console.log(phrase + (n1 + n2));
+        return;
+    }
+    return n1 + n2;
+}
+addtsbs(num1, num2, true, 'The result is ');

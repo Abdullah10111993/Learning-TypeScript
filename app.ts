@@ -27,5 +27,17 @@ function addtsb(n1: number, n2: number, donotReturn: boolean) {
     return n1 + n2;
 }
 
-addtsb(num1, num2, false);
+addtsb(num1, num2, false); // will not print
 addtsb(num1, num2, true);
+
+
+// ts string
+function addtsbs(n1: number, n2: number, donotReturn: boolean, phrase: string) {
+    if (donotReturn) {
+        console.log(phrase + (n1 + n2));
+        return;
+    }
+    return n1 + n2;
+}
+
+addtsbs(num1, num2, true, 'The result is ');
