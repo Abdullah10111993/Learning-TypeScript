@@ -57,8 +57,16 @@ let persontsSpecificObj3: {
     name: [string, string]; // [firstname, lastname]
     age: number;
     routine: [number, string][];
+    role: [string, number]
 } = {
     name: ['Abdullah', 'Abdullah'],
     age: 69,
-    routine: [[9, 'Breakfast'], [11, 'Meeting']]
+    routine: [[9, 'Breakfast'], [11, 'Meeting']],
+    role: ['author', 1]
 }
+
+persontsSpecificObj3.role.push(10); // doesn't produce error but wrong
+persontsSpecificObj3.role.push('admin'); // doesn't produce error but wrong
+// persontsSpecificObj3.role[0] = 10; // will produce an error
+
+console.log(persontsSpecificObj3);
