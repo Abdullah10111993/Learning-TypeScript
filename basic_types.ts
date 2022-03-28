@@ -41,3 +41,14 @@ function addtsbs(n1: number, n2: number, donotReturn: boolean, phrase: string) {
 }
 
 addtsbs(num1, num2, true, 'The result is ');
+
+// ts any
+function addtsany(numbers: any[]) {
+    let result = 0;
+    for (let number in numbers) {
+        result += numbers[number]
+    }
+    return result;
+}
+
+console.log(addtsany([1, 2, '3', 4]));
